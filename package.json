@@ -1,0 +1,44 @@
+{
+  "name": "paperless-static-sites",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev:server": "ts-node-dev --files --transpile-only --respawn --inspect=4321 --project tsconfig.json .\\src\\serverMain.ts",
+    "dev:browsersync": "npx delay 3.0 && npx browser-sync start --config bs-config.js",
+    "dev": "npx concurrently --kill-others-on-fail \"npm:dev:server\" \"npm:dev:browsersync\"",
+    "exportLocal": "tsup && npm pack",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.3",
+    "@types/ws": "^8.18.1",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "concurrently": "^9.1.2",
+    "delay-cli": "^2.0.0",
+    "eslint": "^9.29.0",
+    "ts-node-dev": "^2.0.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "i": "^0.3.7",
+    "npm": "^11.4.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "strict-event-emitter": "^0.5.1",
+    "ws": "^8.18.2"
+  }
+}
