@@ -1,9 +1,9 @@
 import http from "http";
-import * as express from "express";
 import * as fs from "fs";
 import * as os from "os";
 import * as path from "path";
 
+import * as express from "express";
 async function mainExpressAsync(httpPort: number) {
    let lh: () => string = () => `[${new Date().toISOString().slice(0, -1).split('T')[1]}] [ SRV]`;
    const app: express.Express = express.default();
@@ -31,5 +31,8 @@ async function mainExpressAsync(httpPort: number) {
    }
    console.log(`${lh()} Listening on port ${httpPort}`);
 }
-
 (async () => { await mainExpressAsync(3000); })();
+
+(async () => {
+   console.log("Hello world");
+})();
