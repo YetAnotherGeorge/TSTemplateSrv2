@@ -371,3 +371,4 @@ FodyWeavers.xsd
 /public/dist
 /public/dist/*
 node_modules/**
+TSTemplateSrv2.code-workspace
