@@ -1,5 +1,5 @@
 {
-  "name": "paperless-static-sites",
+  "name": "TSTemplateSrv2",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -9,9 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "dev:server": "ts-node-dev --files --transpile-only --respawn --inspect=4321 --project tsconfig.json .\\src\\serverMain.ts",
-    "dev:browsersync": "npx delay 3.0 && npx browser-sync start --config bs-config.js",
-    "dev": "npx concurrently --kill-others-on-fail \"npm:dev:server\" \"npm:dev:browsersync\"",
+    "dev": "ts-node-dev --files --transpile-only --respawn --inspect=4321 --project tsconfig.json .\\src\\serverMain.ts",
     "exportLocal": "tsup && npm pack",
     "build": "tsc --build",
     "clean": "tsc --build --clean"
