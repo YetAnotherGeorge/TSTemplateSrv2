@@ -1,5 +1,5 @@
 {
-  "name": "TSTemplateSrv2",
+  "name": "ts-template-srv2",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -10,22 +10,22 @@
   ],
   "scripts": {
     "dev": "ts-node-dev --files --transpile-only --respawn --inspect=4321 --project tsconfig.json .\\src\\serverMain.ts",
-    "exportLocal": "tsup && npm pack",
     "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "clean": "tsc --build --clean",
+    "force-upgrade": "npx npm-check-updates -u"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "^5.0.3",
-    "@types/node": "^24.1.0",
-    "concurrently": "^9.2.0",
+    "@types/node": "^24.9.1",
+    "concurrently": "^9.2.1",
     "ts-node-dev": "^2.0.0",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "npm": "^11.4.2"
+    "npm": "^11.6.2"
   }
 }
